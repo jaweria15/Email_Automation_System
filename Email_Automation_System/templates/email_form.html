@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Automation</title>
+</head>
+<body>
+
+    <form action="/" method="post">
+
+        <label for="Name">Your Name: </label><br>
+        <input type="text" id="Name" name="Name" required><br><br>
+
+<!--        <label for="sender_email">Sender Email:</label><br>-->
+<!--        <input type="email" id="sender_email" name="sender_email" required><br><br>-->
+
+        <label for="receiver_email">Receiver Email:</label><br>
+        <input type="email" id="receiver_email" name="receiver_email" required><br><br>
+
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="field">field:</label><br>
+        <input type="text" id="field" name="field" required><br><br>
+
+        <label for="company_name">company name:</label><br>
+        <input type="text" id="company_name" name="company_name" required><br><br>
+
+        <label for="manager_name">Hiring Manager's Name:</label><br>
+        <input type="text" id="manager_name" name="manager_name" required><br><br>
+
+        <input type="submit" value="Send Email">
+    </form>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+          {% for category, message in messages %}
+            <li><strong>{{ category }}:</strong> {{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>
