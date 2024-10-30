@@ -21,11 +21,11 @@ def send_email():
     manager_name = request.form.get('manager_name')
     field = request.form.get('field')
     company_name = request.form.get('company_name')
-
-    if Name == 'your_name' or Name == 'Your_name':
-        sender_email = 'abc@gmail.com'
-        email_pass = '16 digit email password'  # SMTP password for the sender's email
-        phone = '+92XXXXXX'
+# replace all information according to yours
+    if Name == 'Jaweria' or Name == 'jaweria': # replace jaweria to your name 
+        sender_email = 'abc@gmail.com' #replace this email with yours email 
+        email_pass = '16 digit email password'  # In readme file I mention how to get this password 
+        phone = '+92XXXXXX' 
         linkedin = 'https://www.linkedin.com/in/jaweria15/'
 
     elif Name == 'your_name' or Name == 'your_name':
@@ -40,7 +40,6 @@ def send_email():
     elif field == 'Machine Learning ' or 'machine learning':
         specific = 'programming and data analysis'
 
-    # email_pass = 'hlbd imrf sgdi vedu'  # SMTP password for the sender's email
 
     body = f'''Hi {manager_name},
 
